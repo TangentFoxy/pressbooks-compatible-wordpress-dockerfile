@@ -13,3 +13,7 @@ RUN curl -L -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/down
   && mkdir /opt/epubcheck \
   && cp -r /tmp/epubcheck-5.1.0/* /opt/epubcheck/ \
   && rm -r /tmp/*
+
+RUN curl -L -o /tmp/prince.deb https://www.princexml.com/download/prince_15.4.1-1_debian12_amd64.deb \
+  && apt install -y /tmp/prince.deb \
+  && rm -r /tmp/*

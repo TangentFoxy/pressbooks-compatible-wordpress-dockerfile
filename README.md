@@ -11,4 +11,4 @@ define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar
 ## Note to self
 
 1. Use `docker login` to log in to Docker Hub.
-2. Run `./build.sh` to take care of the rest.
+2. Run `./build.sh` (or `./build.ps1` on Windows) to take care of the rest.
