@@ -24,6 +24,7 @@ Pressbooks' [installation instructions](https://pressbooks.org/user-docs/install
 6. For some reason, despite configuration for commands being part of the config, they don't work when in a different location than Pressbooks expects. As a result, the installation of Saxon HE is *weird*.
 7. Despite following instructions to enable ODT export, it does not appear.
 8. PDF export doesn't support covers, or requires manual setup to get covers to export. I haven't figured this one out yet. (Also the "for print" export just removes links within the PDF, so it's just worse in *almost* every way.)
+9. The listed dependencies for using the cover generator are actually only required for EPUB covers. The PDF covers can be generated without them. (This is not stated.) Also, **the cover generator will permanently delete any custom uploaded covers without warning**. Nice.
 
 I don't know why it tells you to install two themes, only one of which appears to be usable/real. Perhaps Aldine relies on McLuhan to function? But McLuhan doesn't even appear as an option.
 

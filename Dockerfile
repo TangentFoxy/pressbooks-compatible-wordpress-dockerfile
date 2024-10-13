@@ -4,8 +4,11 @@ FROM wordpress:latest
 LABEL maintainer = "Tangent/Rose <tangent@tangentfox.com>"
 
 RUN apt update && apt install -y \
+  ghostscript \
+  imagemagick \
   libxml2-utils \
   openjdk-17-jre \
+  poppler-utils \
   unzip \
   && rm -rf /var/lib/apt/lists/*
 
