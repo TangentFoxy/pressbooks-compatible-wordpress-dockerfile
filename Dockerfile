@@ -1,4 +1,5 @@
-FROM wordpress:latest   # I know this is bad practise, but I couldn't get it working with a specified version
+# I know this is bad practise, but I couldn't get it working with a specified version
+FROM wordpress:latest
 
 LABEL maintainer = "Tangent/Rose <tangent@tangentfox.com>"
 
