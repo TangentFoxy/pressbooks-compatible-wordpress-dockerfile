@@ -10,5 +10,6 @@ RUN apt update && apt install -y \
 
 RUN curl -L -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.1.0/epubcheck-5.1.0.zip \
   && unzip /tmp/epubcheck.zip -d /tmp \
+  && mkdir /opt/epubcheck \
   && cp -r /tmp/epubcheck-5.1.0/* /opt/epubcheck/ \
   && rm -r /tmp/*
