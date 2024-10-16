@@ -17,7 +17,7 @@ define( 'WP_DEFAULT_THEME', 'pressbooks-book' );
 
 ## Confusion in official documentation
 
-Pressbooks' [installation instructions](https://pressbooks.org/user-docs/installation/) has misleading, incorrect, and duplicate instructions.
+Pressbooks' [installation instructions](https://pressbooks.org/user-docs/installation/) has misleading, incorrect, and duplicate instructions. ([I opened an issue about it](https://github.com/pressbooks/pressbooks/issues/3810).)
 
 1. The first steps seem out of order to me. Step 1 should actually be the WordPress setup, including starting a multisite network. (At time of writing, needs to be at least version 6.6.1 with PHP 8.1 or higher. Newest information should be at the [ReadMe here](https://github.com/pressbooks/pressbooks/blob/dev/README.md).)
 2. To enable the default themes, you are told to navigate to "Themes → Installed Themes" after enabling Pressbooks, but Pressbooks overwrites the names of WordPress features, so you actually have to go to "Appearance → Activate Book Themes".
