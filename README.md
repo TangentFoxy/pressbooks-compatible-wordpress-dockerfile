@@ -10,6 +10,9 @@ define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
 define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
 define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
 define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
+
+// Temporary fix for https://github.com/pressbooks/pressbooks/issues/3807
+define( 'WP_DEFAULT_THEME', 'pressbooks-book' );
 ```
 
 ## Confusion in official documentation
