@@ -2,6 +2,19 @@
 
 Modifying the WordPress docker image to install Pressbooks' dependencies.
 
+## Personal edition of setup instructions
+
+1. Start the container and run basic setup.
+2. Add to wp-config.php:
+   ```
+   /* Multisite */
+   define( 'WP_ALLOW_MULTISITE', true );
+   ```
+   (Above `/* That's all, stop editing! Happy publishing. */`.)
+3. (At this point, you must be accessing WordPress from the correct domain.) Click "Tools". Click "Network Setup".
+
+Cosmos server is breaking while I try to make this work, so I'm giving up on it for now.
+
 Don't forget to add the following to `/var/www/html/wp-config.php`:
 
 ```
@@ -10,9 +23,6 @@ define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
 define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
 define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
 define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
-
-// Temporary fix for https://github.com/pressbooks/pressbooks/issues/3807
-define( 'WP_DEFAULT_THEME', 'pressbooks-book' );
 ```
 
 ## Confusion in official documentation
