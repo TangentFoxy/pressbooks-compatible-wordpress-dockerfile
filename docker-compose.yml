@@ -1,3 +1,17 @@
+volumes:
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /path/on/host
+  db:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /path/on/host
+
 services:
   pressbooks:
     image: guard13007/pressbooks-compatible-wordpress-dockerfile:latest
@@ -13,6 +27,7 @@ services:
       - wordpress:/var/www/html
 
   db:
+    container_name: db
     image: mysql:8.0
     restart: always
     environment:
@@ -22,7 +37,3 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
-
-volumes:
-  wordpress:
-  db:
