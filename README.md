@@ -12,18 +12,18 @@ Modifying the WordPress docker image to install Pressbooks' dependencies.
    ```
    (Above `/* That's all, stop editing! Happy publishing. */`.)
 3. (At this point, you must be accessing WordPress from the correct domain.) Click "Tools". Click "Network Setup".
-
-Cosmos server is breaking while I try to make this work, so I'm giving up on it for now.
-
-Don't forget to add the following to `/var/www/html/wp-config.php`:
-
-```
-// Pressbooks dependencies
-define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
-define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
-define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
-define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
-```
+4. Follow the first step in WordPress's network setup instructions (but the 2nd doesn't matter).
+5. Find the correct URL for the current release of [pressbooks](https://github.com/pressbooks/pressbooks/releases), [pressbooks-book (McLuhan)](https://github.com/pressbooks/pressbooks-book/releases), and [pressbooks-aldine](https://github.com/pressbooks/pressbooks-aldine/releases) so you can download them to the correct places.
+6. Follow steps 3-5 in "Manual Installation" and all of "Activate Plugins & Themes" at https://pressbooks.org/user-guides/installation/
+    (Note that steps in "Activate Plugins & Themes" have some redundancies and misnamed instructions.)
+7. Don't forget to add the following to `/var/www/html/wp-config.php`:
+    ```
+    // Pressbooks dependencies
+    define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
+    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
+    define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
+    define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
+    ```
 
 ## Confusion in official documentation
 
