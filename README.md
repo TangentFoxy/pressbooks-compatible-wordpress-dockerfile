@@ -12,7 +12,7 @@ Modifying the WordPress docker image to install Pressbooks' dependencies.
    ```
    (Above `/* That's all, stop editing! Happy publishing. */`.)
 3. (At this point, you must be accessing WordPress from the correct domain.) Click "Tools". Click "Network Setup".
-4. Follow the first step in WordPress's network setup instructions (but the 2nd doesn't matter).
+4. Follow the instructions in WordPress's network setup instructions.
 5. Find the correct URL for the current release of [pressbooks](https://github.com/pressbooks/pressbooks/releases), [pressbooks-book (McLuhan)](https://github.com/pressbooks/pressbooks-book/releases), and [pressbooks-aldine](https://github.com/pressbooks/pressbooks-aldine/releases) so you can download them to the correct places.
 6. Follow steps 3-5 in "Manual Installation" and all of "Activate Plugins & Themes" at https://pressbooks.org/user-guides/installation/
     (Note that steps in "Activate Plugins & Themes" have some redundancies and misnamed instructions.)
